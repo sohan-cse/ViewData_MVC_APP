@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center container-fluid">
+    
+    <h1 class="bg-primary fw-bold">Product Details</h1>
+    <hr />
+    <h3>Product Id       : ViewData["Id"]</h3>
+    <h3>Product Name     : ViewData["Name"]</h3>
+    <h3>Product Price    : ViewData["Price"]</h3>
+    <h3>Product Quantity : ViewData["Quantity"]</h3>
+    <h3>Stock value : @(Convert.ToInt32(ViewData["Price"])*Convert.ToInt32(ViewData["Quantity"]))</h3>
+</div>
