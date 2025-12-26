@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "ViewBag Demo";
+}
+
+<h1>Product Details</h1>
+<hr />
+
+<h3>Product Id       : @ViewBag.Id</h3>
+<h3>Product Name     : @ViewBag.Name</h3>
+<h3>Product Price    : @ViewBag.Price</h3>
+<h3>Product Quantity : @ViewBag.Quantity</h3>
+<h3>Stock Value      : @(ViewBag.Price*ViewBag.Quantity)</h3>

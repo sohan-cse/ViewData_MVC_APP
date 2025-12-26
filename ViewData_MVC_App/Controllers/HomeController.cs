@@ -13,7 +13,24 @@ namespace ViewData_MVC_App.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult Index_ViewData()
+        {
+            ViewData["Id"] = 101;
+            ViewData["Name"] = "Laptop";
+            ViewData["Price"] = 75000.00m;
+            ViewData["Quantity"] = 5;
+            return View();
+        }
+        public IActionResult Index_ViewBag()
+        {
+            ViewBag.Id = 201;
+            ViewBag.Name = "PC";
+            ViewBag.Price = 90000;
+            ViewBag.Quantity = 10;
+            return View();
+        }
+
+        public IActionResult Index_TempData()
         {
             ViewData["Id"] = 101;
             ViewData["Name"] = "Laptop";
@@ -22,10 +39,6 @@ namespace ViewData_MVC_App.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
