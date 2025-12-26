@@ -13,6 +13,11 @@ namespace ViewData_MVC_App.Controllers
             _logger = logger;
         }
 
+        public IActionResult Index()
+        {
+            TempData["Message"] = "Data passed from Index";
+            return RedirectToAction("Index_TempData");
+        }
         public IActionResult Index_ViewData()
         {
             ViewData["Id"] = 101;
@@ -32,10 +37,6 @@ namespace ViewData_MVC_App.Controllers
 
         public IActionResult Index_TempData()
         {
-            ViewData["Id"] = 101;
-            ViewData["Name"] = "Laptop";
-            ViewData["Price"] = 75000.00m;
-            ViewData["Quantity"] = 5;
             return View();
         }
 
